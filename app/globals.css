@@ -5,8 +5,37 @@
 
 html {
   scroll-behavior: smooth;
+
+  background-image: 
+  linear-gradient(to right, rgba(238,238,238,.02) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(238,238,238,.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-attachment: fixed;
+
 }
 
+:root {
+    --pointerX: 50vw;
+    --pointerY: 50vh;
+    --color-cursor-gradient: rgba(0, 123, 255, 0.08)
+    
+}
+
+
+body:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at var(--pointerX) var(--pointerY),
+    var(--color-cursor-gradient) 10%,
+    transparent 50%
+  );
+  z-index: -1;
+}
 
 .nav-active {
   transform-origin: left;

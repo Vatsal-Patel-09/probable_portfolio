@@ -14,8 +14,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
-    <html lang="en" data-theme="coffee">
+    <html lang="en" data-theme="luxury">
 
       <body className={robotoMono.className}>
 

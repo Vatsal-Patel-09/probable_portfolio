@@ -26,7 +26,7 @@ const Nav = () => {
 
 
   return (
-    <div id="nav" className="hidden lg:flex flex-col justify-start gap-3">
+    <div id="nav" className="hidden md:flex flex-col justify-start gap-3">
         <a href="#about" className={`hover:text-primary w-fit ${activeSection === 'about' ? 'nav-active' : ''}`}>
             <div className="flex items-center">
                 <span className="navlink-line"></span>
@@ -36,7 +36,7 @@ const Nav = () => {
         <a href="#work-experience-heading" className={`hover:text-primary w-fit ${activeSection === 'work-experience' ? 'nav-active' : ''}`}>
         <div className="flex items-center">
                 <span className="navlink-line"></span>
-                <span className="line-height-0">Work Experience</span>
+                <span className="line-height-0">Work Experiences</span>
             </div>
         </a>
         <a href="#projects-heading" className={`hover:text-primary w-fit ${activeSection === 'projects' ? 'nav-active' : ''}`}>

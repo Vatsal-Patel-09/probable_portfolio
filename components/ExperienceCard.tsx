@@ -10,9 +10,9 @@ interface ExpInfo {
 const ExperienceCard = ({year, company, title, description, techStack}: ExpInfo) => {
 
   return (
-<div className="grid grid-cols-12 gap-2 p-8 rounded-xl hover:bg-primary hover:bg-opacity-10 transition duration-300 ease-in-out">
-        <div className="col-span-4 text-sm text-primary ">{year}</div>
-        <div className="col-span-8">
+<div className="grid grid-cols-12 gap-2 p-4 md:p-8 rounded-xl hover:bg-primary hover:bg-opacity-10 transition duration-300 ease-in-out">
+        <div className="col-span-12 md:col-span-4 text-sm text-primary ">{year}</div>
+        <div className="col-span-12 md:col-span-8">
             <h1 className="text-lg font-bold">{title}</h1>
             <h2 className="text-lg mb-5">{company}</h2>
             <p className="mb-5 text-sm">{description}</p>
