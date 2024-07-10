@@ -8,6 +8,8 @@ RUN npm install --production
 
 COPY . .
 
+ENV NEXT_PRIVATE_STANDALONE true
+
 RUN npm run build
 
 EXPOSE 3000
