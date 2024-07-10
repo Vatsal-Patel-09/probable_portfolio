@@ -3,7 +3,7 @@ name: Deply Nexy.js Application
 
 on: 
   push:
-    branches::
+    branches:
       - main
 
 jobs:
@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout the source code
         uses: actions/checkout@v4
-      # - name: Create .env file
-      #   run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
       - name: Build docker image
         run: docker build -t jerryclarkc/webprofolio-nextjs .
 
@@ -36,5 +34,5 @@ jobs:
       - name: Run docker container
         run: docker run -d -p 3000:3000 --name nextjs-app-container jerryclarkc/webprofolio-nextjs
 
-        
+
     
