@@ -16,7 +16,7 @@ const EXPERIENCES = [
         "Python",
         "Java",
         "PHP",
-        "AWS",
+        "Amazon Web Services",
         "Jenkins",
         "GitHub",
         "GitTea",

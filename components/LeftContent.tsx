@@ -1,22 +1,10 @@
-"use client"
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaEnvelope } from "react-icons/fa";
-import { useState, useEffect } from "react";
 import Nav from "./Nav";
 
 const LeftContent = () => {
 
-    window.addEventListener("mousemove", (event) => {
-        const pointerX = event.clientX;
-        const pointerY = event.clientY;
-        const body = document.querySelector("body");
-        if (body) {
-          body.style.setProperty("--pointerX", pointerX + "px");
-          body.style.setProperty("--pointerY", pointerY + "px");
-        }
-      });
-
   return (
-    <div className="sticky top-0 md:h-screen text-center md:text-start p-4 md:p-[4rem] mb-[5rem] pe-2 flex flex-col justify-between gap-10">
+    <div className="sticky top-0 md:h-screen text-center md:text-start p-4 md:p-[4rem] mb-[5rem] md:mb-0 pe-2 flex flex-col justify-between gap-10">
         <div id="intro" className="pt-10 md:pt-0">
             <h1 className="text-4xl font-bold mb-8 ">Jerry Clark Ian Cabuntucan</h1>
             <h3 className="text-xl mb-8">Full Stack Web Developer - Cloud Enthusiast</h3>

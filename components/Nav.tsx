@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 
 const Nav = () => {
@@ -6,7 +7,7 @@ const Nav = () => {
 
   useEffect(() => {
     const handleScroll = (): void => {
-      const sections = ['about', 'work-experience', 'projects', 'blog'];
+      const sections = ['about', 'work-experience', 'tech-stack', 'projects', 'blog'];
       const sectionElements = sections.map(section => document.getElementById(section) as HTMLDivElement | null);
 
       const scrollPosition = window.scrollY;
@@ -34,12 +35,18 @@ const Nav = () => {
             </div>
         </a>
         <a href="#work-experience-heading" className={`hover:text-primary w-fit ${activeSection === 'work-experience' ? 'nav-active' : ''}`}>
-        <div className="flex items-center">
+            <div className="flex items-center">
                 <span className="navlink-line"></span>
                 <span className="line-height-0">Work Experiences</span>
             </div>
         </a>
-        <a href="#projects-heading" className={`hover:text-primary w-fit ${activeSection === 'projects' ? 'nav-active' : ''}`}>
+        <a href="#tech-stack-heading" className={`hover:text-primary w-fit ${activeSection === 'tech-stack' ? 'nav-active' : ''}`}>
+            <div className="flex items-center">
+                <span className="navlink-line"></span>
+                <span className="line-height-0">Tech Stack</span>
+            </div>
+        </a>
+        <a href="#project-heading" className={`hover:text-primary w-fit ${activeSection === 'projects' ? 'nav-active' : ''}`}>
         <div className="flex items-center">
                 <span className="navlink-line"></span>
                 <span className="line-height-0">Projects</span>
