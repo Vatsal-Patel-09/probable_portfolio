@@ -1,0 +1,40 @@
+name: Deply Nexy.js Application
+
+
+on: 
+  push:
+    branches::
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the source code
+        uses: actions/checkout@v4
+      # - name: Create .env file
+      #   run: echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
+      - name: Build docker image
+        run: docker build -t jerryclarkc/webprofolio-nextjs .
+
+      - name: Login to docker hub
+        uses: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      - name: Push docker image to Dockerhub
+        run: docker push jerryclarkc/webprofolio-nextjs:latest
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: Pull image from docke hub
+        run: docker pull jerryclarkc/webprofolio-nextjs:latest
+      
+      - name: Delete old container
+        run: docker rm -f nextjs-app-container
+      
+      - name: Run docker container
+        run: docker run -d -p 3000:3000 --name nextjs-app-container jerryclarkc/webprofolio-nextjs
+
+        
+    

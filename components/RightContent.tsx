@@ -73,8 +73,8 @@ const RightContent = () => {
               
           <ProjectCard 
             name="Web Portfolio v2"
-            description="Portfolio showcasing projects and blogs, built with Next.js, Tailwind CSS, and Daisy UI, with a Node.js backend. Deployed using Docker and GitHub Actions on AWS."
-            tags={["Next.js", "Tailwind CSS", "Daisy UI", "Node.js", "Docker", "Github Actions", "AWS" ]}
+            description="Portfolio showcasing projects and blogs, built with Next.js, Tailwind CSS, and Daisy UI, with a Node.js backend. Deployed using Docker and GitHub Actions on AWS EC2."
+            tags={["Next.js", "Tailwind CSS", "Daisy UI", "Node.js", "Docker", "Github Actions", "AWS EC2" ]}
             thumbnail="/images/portfolio-website.png"
             href="https://github.com/Ayan0420/webportfolio-nextjs"
           />
