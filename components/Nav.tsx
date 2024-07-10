@@ -55,7 +55,7 @@ const Nav = () => {
         <a href="#blog-heading" className={`hover:text-primary w-fit ${activeSection === 'blog' ? 'nav-active' : ''}`}>
         <div className="flex items-center">
                 <span className="navlink-line"></span>
-                <span className="line-height-0">Blog</span>
+                <span className="line-height-0">Blogs</span>
             </div>
         </a>
     </div>

@@ -53,15 +53,7 @@ const RightContent = () => {
       
       <section className="min-h-screen pt-[5rem]" id="projects">
           <h1 className="text-2xl font-bold mb-5 text-center md:text-start" id="project-heading">Projects</h1>
-          
-          <ProjectCard 
-            name="Web Portfolio v2"
-            description="Portfolio showcasing projects and blogs, built with Next.js, Tailwind CSS, and Daisy UI, with a Node.js backend. Deployed using Docker and GitHub Actions on AWS."
-            tags={["Next.js", "Tailwind CSS", "Daisy UI", "Node.js", "Docker", "Github Actions", "AWS" ]}
-            thumbnail="/images/portfolio-website.png"
-            href="https://github.com/Ayan0420/webportfolio-nextjs"
-          />
-
+    
           <ProjectCard 
             name="MoreTech Online - ECommerce App"
             description="Fullstack Ecommerce application created with the MERN stack deployed on Vercel."
@@ -78,7 +70,58 @@ const RightContent = () => {
             href="https://github.com/Ayan0420/Ecommerce-API-Node-Express-MongoDB"
           />
 
+              
+          <ProjectCard 
+            name="Web Portfolio v2"
+            description="Portfolio showcasing projects and blogs, built with Next.js, Tailwind CSS, and Daisy UI, with a Node.js backend. Deployed using Docker and GitHub Actions on AWS."
+            tags={["Next.js", "Tailwind CSS", "Daisy UI", "Node.js", "Docker", "Github Actions", "AWS" ]}
+            thumbnail="/images/portfolio-website.png"
+            href="https://github.com/Ayan0420/webportfolio-nextjs"
+          />
 
+          <ProjectCard 
+            name="Web Portfolio v1"
+            description="Portfolio showcasing projects, built with HTML, CSS, Bootstrap, and JavaScript. Deployed on GitHub Pages."
+            tags={["HTML", "CSS", "Bootstrap", "Javascript", "Gihub Pages"]}
+            thumbnail="/images/web-portfolio-v1.png"
+            href="https://ayan0420.github.io/webportfolio/"
+          />
+
+          <div className="mt-10">
+              <h1 className="text-lg font-bold mb-3 text-center md:text-start">Other Projects</h1>
+              <ul className="list-disc pl-5">
+                <li>
+                  <a href="https://ayan-blog.onrender.com/" target="_blank" className="text-blue-500 hover:text-blue-300">
+                    Simple Blog Site - Node.js, Express.js, EJS, MongoDB
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.comtechgingoog.com/" target="_blank" className="text-blue-500 hover:text-blue-300">
+                    Buisiness Website - HTML, CSS, Boostrap, Javascript
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Ayan0420/comtech-dashboard-order-management-system" target="_blank" className="text-blue-500 hover:text-blue-300">
+                    Buisiness Dashboard/IS - Node.js, Express.js, Charts.js, MongoDB
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Ayan0420/ComtechJobOrderSystemflask" target="_blank" className="text-blue-500 hover:text-blue-300">
+                    Job Order Management System - Python, Flask, Flaskwebgui, Bootstrap, SQLite
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Ayan0420/comtech-dashboard-order-management-system" target="_blank" className="text-blue-500 hover:text-blue-300">
+                    Job Order Tracking System - Node.js, Express.js, Charts.js, MongoDB
+                  </a>
+                </li>
+                <li>
+                  <a href="https://movie-search-jcei.onrender.com/" target="_blank" className="text-blue-500 hover:text-blue-300">
+                    Simple Movie Search App - React.js, OMDB API
+                  </a>
+                </li>
+              </ul>
+          </div>
           
       </section>
       
