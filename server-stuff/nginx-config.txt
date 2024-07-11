@@ -2,7 +2,7 @@ server {
     listen 80;
     server_name example.com; 
 
-    location / {
+    location /portfolio {
         proxy_pass http://localhost:3000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
@@ -13,7 +13,7 @@ server {
 }
 
 Notes:
-- change the example.com to a domain or _
+- change the example.com to a domain or instance ip
 - create a new nginx config file named "my-proxy-server"
 - run
     sudo ln -s /etc/nginx/sites-available/my-proxy-server /etc/nginx/sites-enabled/
