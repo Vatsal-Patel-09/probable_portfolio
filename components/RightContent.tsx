@@ -128,6 +128,7 @@ const RightContent = () => {
       <section className="min-h-screen pt-[5rem]" id="blog">
           <h1 className="text-2xl font-bold mb-3 text-center md:text-start" id="blog-heading">Blogs</h1>
           
+          <h1 className="text-lg font-bold mb-3 text-center md:text-start">Deploy Success</h1>
           
       </section>
 

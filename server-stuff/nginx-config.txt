@@ -1,0 +1,21 @@
+server {
+    listen 80;
+    server_name example.com; 
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+Notes:
+- change the example.com to a domain or _
+- create a new nginx config file named "my-proxy-server"
+- run
+    sudo ln -s /etc/nginx/sites-available/my-proxy-server /etc/nginx/sites-enabled/
+    sudo nginx -t
+    sudo systemctl reload nginx
