@@ -7,7 +7,7 @@ interface ProjectDesc {
   href: string;
 }
 
-const basePath = '/portfolio';
+const basePath = '';
 
 const ProjectCard = ({name, description, tags, thumbnail, href}: ProjectDesc) => {
   

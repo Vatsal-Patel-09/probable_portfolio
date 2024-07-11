@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Gudea
+- Font Author: Copyright (c) 2012, Agustina Mingote (agustinamingote@gmail.com), with Reserved Font Names "Gudea"
+- Font Source: https://fonts.gstatic.com/s/gudea/v15/neIIzCqgsI0mp9gz26WGHK06UY30.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
