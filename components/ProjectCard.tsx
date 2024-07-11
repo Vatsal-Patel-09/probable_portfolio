@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 interface ProjectDesc {
   name: string;
   description: string;
@@ -8,12 +7,16 @@ interface ProjectDesc {
   href: string;
 }
 
+const basePath = '/portfolio';
+
 const ProjectCard = ({name, description, tags, thumbnail, href}: ProjectDesc) => {
+  
+
   return (
     <a href={href} target="_blank" className="rounded-lg shadow-md p-4 hover:bg-primary hover:scale-105 hover:bg-opacity-10 transition duration-300 ease-in-out grid grid-cols-12 gap-3 mb-5">
         <div className="col-span-12 md:col-span-4 flex items-center justify-center">
             <Image
-            src={thumbnail}
+            src={`${basePath}/${thumbnail}`}
             alt={name}
             width={300}
             height={200}
