@@ -5,7 +5,7 @@ import "./globals.css";
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jerry Clark Ian Cabuntucan",
+  title: "Jerry Clark Ian Cabuntucan | Web Portfolio",
   description: "Portfolio website",
   icons: {
     icon: "/favicon/favicon-32x32.png",

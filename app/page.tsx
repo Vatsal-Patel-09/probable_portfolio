@@ -12,14 +12,14 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className=" lg:px-[5rem] grid grid-cols-12 gap-0">
+    <main className="container grid grid-cols-12 gap-0">
 
       <CursorEffectComponent />
 
       <div className="col-span-12 lg:col-span-5">
         <LeftContent />
       </div>
-      <div className="col-span-12 lg:col-span-7 p-4 lg:p-[4rem]">
+      <div className="col-span-12 lg:col-span-7 py-4 lg:py-[4rem]">
         <RightContent />
       </div>
     </main>
