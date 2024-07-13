@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="container grid grid-cols-12 gap-0">
+    <main className="container grid grid-cols-12 gap-[4rem]">
 
       <CursorEffectComponent />
 

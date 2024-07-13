@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website v2
 
-## Getting Started
+Welcome to my portfolio website! This repository contains the code for my personal portfolio built with Next.js, deployed on AWS EC2 using GitHub Actions, Docker, and Nginx.
 
-First, run the development server:
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Features
+
+- **Next.js**: A React framework for building fast and scalable web applications.
+- **Tailwind CSS & Daisy UI**: A utility-first CSS framework and a component library for rapid UI development.
+- **Responsive Design**: Optimized for different screen sizes.
+- **AWS EC2**: Deployed using Amazon Web Services EC2.
+- **GitHub Actions**: Continuous integration and deployment.
+- **Docker**: Containerized application for consistency across environments.
+- **Nginx**: Used as a reverse proxy server.
+
+## Installation
+
+To get a local copy up and running, follow these steps:
+
+### Prerequisites
+
+- Node.js
+- Docker
+- AWS account
+
+### Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Ayan0420/webportfolio-nextjs
+cd webportfolio-nextjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Build the Docker image
 
-## Learn More
+```bash
+docker build -t your-image-name .
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Run the Docker container
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker run -p 3000:3000 your-image-name
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The application should now be running on `http://localhost:3000`.
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Navigate through different sections like About, Work Experience, Projects, and Blog. The navbar highlights the current section as you scroll.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+
+The application is deployed on an AWS EC2 instance using GitHub Actions. Here’s an overview of the deployment process:
+
+1. **AWS EC2**: Set up an EC2 instance with the necessary configurations.
+2. **GitHub Actions**: Use the GitHub Actions workflow for continuous integration and deployment.
+3. **Docker**: Build and push Docker images to Docker Hub.
+4. **Nginx**: Configure Nginx as a reverse proxy server to manage traffic.
+
+### GitHub Actions Workflow
+
+Here’s the GitHub Actions workflow used for this project:
+
+[Github Action YAML File](https://github.com/Ayan0420/webportfolio-nextjs/blob/main/.github/workflows/cicd.yml)
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any bugs, feature requests, or enhancements.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+Feel free to reach out to me via email or through my [LinkedIn](https://www.linkedin.com/in/jerry-clark-ian-cabuntucan/).
