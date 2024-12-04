@@ -5,7 +5,7 @@ pipeline {
         REPO_URL = 'https://github.com/Ayan0420/webportfolio-nextjs.git'
         IMAGE_NAME = 'webportfolio-image'
         CONTAINER_NAME = 'webportfolio'
-        SERVER_PORT = '8000'
+        SERVER_PORT = '4201'
         APP_PORT = '3000'  // The port your app exposes
     }
 
