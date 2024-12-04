@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    triggers {
+        // This triggers the pipeline on push events from github repo
+        githubPush() 
+    }
+
     environment {
         REPO_URL = 'https://github.com/Ayan0420/webportfolio-nextjs.git'
         IMAGE_NAME = 'webportfolio-image'
@@ -36,9 +41,12 @@ pipeline {
                     """
                     // Run new container
                     sh """
-                    docker run -d --name ${CONTAINER_NAME} -p ${SERVER_PORT}:${APP_PORT} ${IMAGE_NAME}
+                    docker run -d --name ${CONTAINER_NAME} \
+                    -p ${SERVER_PORT}:${APP_PORT} \
+                    --restart always \
+                    ${IMAGE_NAME}
                     """
-                }
+                }   
             }
         }
     }
