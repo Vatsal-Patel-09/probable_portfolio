@@ -2,6 +2,8 @@
 
 Welcome to my portfolio website! This repository contains the code for my personal portfolio built with Next.js, deployed on AWS EC2 using GitHub Actions, Docker, and Nginx.
 
+Hello!
+
 ## Table of Contents
 
 - [Features](#features)
