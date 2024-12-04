@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    // triggers {
-    //     // This triggers the pipeline on push events from github repo
-    //     githubPush() 
-    // }
+    triggers {
+        // This triggers the pipeline on push events from github repo
+        githubPush() 
+    }
 
     environment {
         REPO_URL = 'https://github.com/Ayan0420/webportfolio-nextjs.git'
