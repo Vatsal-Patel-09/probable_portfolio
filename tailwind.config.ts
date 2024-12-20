@@ -29,7 +29,7 @@ const config: Config = {
     require('daisyui'),
   ],
   daisyui: {
-    themes: ["light", "dark", "retro", "luxury", "dracula", "cmyk", "autumn", "business", "acid", "lemonade", "night", "coffee", "winter"],
+    themes: ["luxury"],
   },
 };
 export default config;

@@ -16,10 +16,10 @@ export default function Home() {
 
       <CursorEffectComponent />
 
-      <div className="col-span-12 lg:col-span-5">
+      <div className="col-span-12 lg:col-span-5 w-full">
         <LeftContent />
       </div>
-      <div className="col-span-12 lg:col-span-7 py-4 lg:py-[4rem]">
+      <div className="col-span-12 lg:col-span-7 py-4 lg:py-[4rem] w-full">
         <RightContent />
       </div>
     </main>

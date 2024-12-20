@@ -18,10 +18,10 @@ const RightContent = () => {
       <section className="leading-loose text-center md:text-start" id="about">
         <h1 className="block md:hidden text-2xl font-bold mb-5 text-center md:text-start" id="projects-heading">About</h1>
           <p className="mb-3">
-          Hi! I'm a passionate fullstack developer hailing from Misamis Oriental, Philippines. I specialize in <span className="font-bold text-primary">building seamless and robust web applications</span>, focusing on modern web development technologies. Alongside my development work, I have a strong interest in all things tech, particularly <span className="font-bold text-primary">cloud technologies</span> and <span className="font-bold text-primary">automation (CI/CD)</span>.
+          Hi! I'm a passionate programmer(fullstack) hailing from Misamis Oriental, Philippines. I specialize in <span className="font-bold text-primary">building seamless and robust web applications</span>, focusing on modern web development technologies. Alongside my development work, I have a strong interest in all things tech, particularly<span className="font-bold text-primary"> system administration,</span> <span className="font-bold text-primary">cloud technologies</span> and <span className="font-bold text-primary">automation (DevOps)</span>.
           </p>
           <p className="mb-3 ">
-          Currently, I am working as an IT instructor, where I get to share my knowledge and inspire the next generation of tech enthusiasts. My enthusiasm for technology drives me to constantly learn and grow. I'm a fast learner, always open to new learning opportunities and eager to embrace new challenges and bring a high level of passion and dedication to everything I do.
+          Currently, I am working as an IT instructor, where I get to share my knowledge and inspire the next generation of tech enthusiasts. My enthusiasm for technology drives me to constantly learn and grow. I'm a problem solver and a fast learner, always open to new learning opportunities and eager to embrace new challenges and bring a high level of passion and dedication.
           </p>
           
       </section>
@@ -128,7 +128,7 @@ const RightContent = () => {
       <section className="min-h-screen pt-[5rem]" id="blog">
           <h1 className="text-2xl font-bold mb-3 text-center md:text-start" id="blog-heading">Blogs</h1>
           
-          <h1 className="text-lg font-bold mb-3 text-center md:text-start">Deploy Success</h1>
+          <h1 className="text-lg font-bold mb-3 text-center md:text-start">Soon..</h1>
           
       </section>
 

@@ -7,7 +7,7 @@ const LeftContent = () => {
     <div className="sticky top-0 md:h-screen text-center md:text-start py-4 md:py-[4rem] mb-[5rem] md:mb-0 flex flex-col justify-between gap-10">
         <div id="intro" className="pt-10 md:pt-0">
             <h1 className="text-4xl font-bold mb-8 ">Jerry Clark Ian Cabuntucan</h1>
-            <h3 className="text-xl mb-8">Full Stack Web Developer - Cloud Enthusiast</h3>
+            <h3 className="text-xl mb-8">Full Stack Developer - Automation Enthusiast</h3>
             <p className="text-sm">Empowering Web Innovation with Fullstack Expertise</p>
         </div>
 
