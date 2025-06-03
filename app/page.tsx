@@ -13,7 +13,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="container grid grid-cols-12 gap-[4rem]">
-
+      <h1>Hello world</h1>
       <CursorEffectComponent />
 
       <div className="col-span-12 lg:col-span-5 w-full">
