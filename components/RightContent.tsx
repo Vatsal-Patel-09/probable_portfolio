@@ -5,6 +5,8 @@ import ProjectCard from "./ProjectCard"
 import dynamic from 'next/dynamic'
 import Footer from "./Footer"
 import { PROJECTS } from "@/data/projects"
+import BlogCard from "./BlogCard"
+import Blog from "./Blog"
 
 // To disable SSR for CursorEffectComponent
 const TechStack = dynamic(() => import('@/components/TechStack'), { ssr: false })
@@ -101,9 +103,8 @@ const RightContent = () => {
       </section>
       
       <section className="min-h-screen pt-[5rem]" id="blog">
-          <h1 className="text-2xl font-bold mb-3 text-center md:text-start" id="blog-heading">Blogs</h1>
           
-          <h1 className="text-lg font-bold mb-3 text-center md:text-start">Soon..</h1>
+          <Blog />
           
       </section>
 
