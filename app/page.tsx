@@ -12,15 +12,16 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="container grid grid-cols-12 gap-[4rem]">
-      <CursorEffectComponent />
-
-      <div className="col-span-12 lg:col-span-5 w-full">
+    <>
+    <CursorEffectComponent />
+    <div className="container flex flex-col md:flex-row lg:flex-row gap-10">
+      <div className="w-full md:w-1/2 lg:w-5/12">
         <LeftContent />
       </div>
-      <div className="col-span-12 lg:col-span-7 py-4 lg:py-[4rem] w-full">
+      <div className="w-full md:w-1/2 lg:w-7/12 py-4 lg:py-[4rem]">
         <RightContent />
       </div>
-    </main>
+    </div>
+    </> 
   );
 }

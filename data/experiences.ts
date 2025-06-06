@@ -27,14 +27,14 @@ const EXPERIENCES = [
       year: "June 2019 - June 2023",
       company: "Christ the King College, Gingoog City",
       title: "Teacher/Technical Support/Multimedia Specialist",
-      description: "As a licensed professional teacher at Christ the King College, I teach Mathematics, Physics, and ICT (Information Communication Technology) to high school and college students. I also serve as an administrator for the Senior High School Department's Facebook page, providing updates and engaging with the community. Additionally, I provide technical support for the school's IT staff and work on multimedia projects, including image editing, videography, video editing, and audio production.",
+      description: "As a licensed professional teacher at Christ the King College, I teach Mathematics, Physics, and ICT (Information Communication Technology) to high school and college students. I also serve as an administrator for the Senior High School Department's Facebook page, providing updates and engaging with the community. Additionally, I provide technical support for the school's IT department and work on multimedia projects, including graphics design, videography, video editing, and audio production.",
       techStack: ["Mathematics", "Physics", "ICT", "Image Editing", "Videography", "Video Editing", "Audio Production"]
     },
     {
       year: "January 2016 - Present",
       company: "Comtech Laptop Repair Shop, Gingoog City",
       title: "Technician/Software Developer (On-Call/Volunteer)",
-      description: "At Comtech Laptop Repair Shop, I work part-time as a technician, addressing software issues of customers' PC's, laptops, and smartphones. I designed and created the shop's official website and developed a software system for job orders and customer information management. I also created a client tracking application for monitoring job orders.",
+      description: "At Comtech Laptop Repair Shop, I work part-time as a technician, addressing software issues of customers' PC's, laptops, and smartphones. I designed and created the shop's official website, developed a software system for job orders and customer information management, and created the client tracking application for monitoring job orders. I also mange the Linux server that hosts the software  system.",
       techStack: ["NodeJS", "ExpressJS", "ElectronJS", "React", "MongoDB", "HTML", "CSS", "JavaScript", "Render", "Software Issues", "Website Design", "Software Development", "Client Tracking"]
     },
     // {
