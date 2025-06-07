@@ -1,8 +1,4 @@
-"use client";
-
-import React, { useEffect } from "react";
-import hljs from "highlight.js";
-import "highlight.js/styles/github-dark-dimmed.css";
+import CodeHighlighter from "./CodeHighlighter";
 
 interface Block {
     id: string;
@@ -15,9 +11,6 @@ interface Props {
 }
 
 const BlockParser: React.FC<Props> = ({ blocks }) => {
-    useEffect(() => {
-        hljs.highlightAll();
-    }, [blocks]);
 
     //   for table of contents
     const headings = blocks.filter((block) => block.type === "header");
@@ -80,9 +73,7 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
 
                     case "code":
                         return (
-                            <pre key={block.id} className="bg-transparent overflow-auto">
-                                <code className="hljs">{block.data.code}</code>
-                            </pre>
+                            <CodeHighlighter block={block} />
                         );
 
                     case "image":

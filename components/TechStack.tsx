@@ -71,6 +71,9 @@ const TechStack = () => {
         <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
             <i className="devicon-python-plain text-4xl" title="Python"></i>
         </a>,
+        <a href="https://directus.io/" target="_blank" rel="noopener noreferrer">
+            Directus CMS
+        </a>,
     ];
 
     useEffect(() => {

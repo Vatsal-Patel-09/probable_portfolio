@@ -4,7 +4,7 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import { createDirectus, rest, readItems } from "@directus/sdk";
 import Link from "next/link";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 const client = createDirectus("https://test-directus.jcic.online").with(rest({
     onRequest: (options) => ({ ...options, cache: 'no-store' }),
@@ -54,7 +54,7 @@ const Blog = async () => {
             })}
             <Link href="/blog" className="btn hover:scale-110 transition duration-300 ease-in-out">
                 See All Blogs
-                <FaArrowUpRightFromSquare className="mr-1" />
+                <FaArrowRight className="mr-1" />
             </Link>
         </>
     );

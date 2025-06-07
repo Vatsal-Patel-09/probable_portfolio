@@ -7,6 +7,7 @@ import Footer from "./Footer"
 import { PROJECTS } from "@/data/projects"
 import BlogCard from "../components/BlogCard"
 import Blog from "../components/Blog"
+import ContactForm from "@/components/ContactForm"
 
 // To disable SSR for CursorEffectComponent
 const TechStack = dynamic(() => import('@/components/TechStack'), { ssr: false })
@@ -31,7 +32,7 @@ const RightContent = () => {
 
 
       <section className="pt-[5rem]" id="work-experience">
-        <h1 className="text-2xl font-bold mb-5 text-center md:text-start" id="work-experience-heading">Work Experiences</h1>
+        <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="work-experience-heading">Work Experiences</h1>
         {
           EXPERIENCES.map((exp, index) => (
             <ExperienceCard key={index} year={exp.year} company={exp.company} title={exp.title} description={exp.description} techStack={exp.techStack} />
@@ -47,7 +48,7 @@ const RightContent = () => {
       </section>
 
       <section className="pt-[5rem]" id="tech-stack">
-        <h1 className="text-2xl font-bold mb-5 text-center md:text-start" id="tech-stack-heading">
+        <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="tech-stack-heading">
           Tech Stack
         </h1>
         <p className="mb-3">I use these technologies to build my projects.</p>
@@ -55,7 +56,7 @@ const RightContent = () => {
       </section>
       
       <section className="min-h-screen pt-[5rem]" id="projects">
-          <h1 className="text-2xl font-bold mb-5 text-center md:text-start" id="project-heading">Projects</h1>
+          <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="project-heading">Projects</h1>
           
           {
             PROJECTS.map((project, index) => (
@@ -102,10 +103,16 @@ const RightContent = () => {
           
       </section>
       
-      <section className="min-h-screen pt-[5rem]" id="blog">
+      <section className="pt-[5rem]" id="blog">
           
           <Blog />
           
+      </section>
+
+      <section id="contact-form" className="pt-[5rem] min-h-screen">
+        <h1 id="contact-heading" className="text-2xl font-bold text-center md:text-start mb-3 pt-5">Contact</h1>
+        <p className="mb-3 text-center md:text-start">Have a question or interested in working together?</p>
+        <ContactForm />
       </section>
 
       <section>

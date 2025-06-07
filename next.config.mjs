@@ -2,6 +2,7 @@
 const nextConfig = {
     output: "standalone",
     // basePath: '/portfolio',
+    transpilePackages: ['highlight.js'], // disallow highlight.js to be rebuilt to avoid regex error
     images: {
         remotePatterns: [
             {
