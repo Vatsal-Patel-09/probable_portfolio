@@ -41,7 +41,7 @@ const Blog = async () => {
                     if (blog.status !== "published") return;
 
                     return (
-                        <Link href={`/blog/${blog.slug}`} key={blog.id} className="col-span-1">
+                        <Link href={`/blog/${blog.slug}`} key={blog.id} className="col-span-1" prefetch={false}>
                             <BlogCardFull
                                 title={blog.Title}
                                 description={createPreview(blog.preview_text)}
