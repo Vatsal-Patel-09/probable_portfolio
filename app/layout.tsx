@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
+
+// To disable SSR for CursorEffectComponent
+const CursorEffectComponent = dynamic(() => import("@/components/CursorEffectComponent"), {
+  ssr: false,
+});
 
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jerry Clark Ian Cabuntucan | Web Portfolio",
-  description: "Portfolio website",
+  description: "Full Stack Developer - ReactJS, VueJS, NextJS, NuxtJS, NodeJS, ExpressJS, NestJS, MongoDB, PostgreSQL, MySQL, Docker, Kubernetes, AWS, Azure, GCP, GitHub, GitLab",
   icons: {
     icon: "/favicon/favicon-32x32.png",
   }
@@ -27,6 +33,7 @@ export default function RootLayout({
 
       <body className={robotoMono.className}>
 
+        <CursorEffectComponent />
         {children}
 
       </body>

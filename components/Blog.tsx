@@ -1,19 +1,21 @@
-import React, { cache } from "react";
+export const dynamic = 'force-dynamic';
+
+import React from "react";
 import BlogCard from "./BlogCard";
 import { createDirectus, rest, readItems } from "@directus/sdk";
 import Link from "next/link";
+import { Sora } from "next/font/google";
 
 const client = createDirectus("https://test-directus.jcic.online").with(rest({
     onRequest: (options) => ({ ...options, cache: 'no-store' }),
   }));
-
-export const dynamic = 'force-dynamic';
 
 const Blog = async () => {
 
     // query to Directus
     const query_object = {
         fields: ["id", "Title", "preview_text", "banner_image", "slug", "status"],
+        sort: ["-date_created"],
     };
     const blogs = await client.request(readItems("Portfolio_Blog", query_object));
 
