@@ -98,7 +98,7 @@ const Nav = () => {
             >
                 <div className="flex items-center">
                     <span className="navlink-line"></span>
-                    <span className="line-height-0">Hire Me</span>
+                    <span className="line-height-0">Contact Me</span>
                 </div>
             </a>
         </div>
