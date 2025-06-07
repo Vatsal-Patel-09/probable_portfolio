@@ -1,12 +1,12 @@
 import EXPERIENCES from "@/data/experiences"
-import ExperienceCard from "./ExperienceCard"
+import ExperienceCard from "../components/ExperienceCard"
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "../components/ProjectCard"
 import dynamic from 'next/dynamic'
 import Footer from "./Footer"
 import { PROJECTS } from "@/data/projects"
-import BlogCard from "./BlogCard"
-import Blog from "./Blog"
+import BlogCard from "../components/BlogCard"
+import Blog from "../components/Blog"
 
 // To disable SSR for CursorEffectComponent
 const TechStack = dynamic(() => import('@/components/TechStack'), { ssr: false })
@@ -38,7 +38,7 @@ const RightContent = () => {
           ))
         }
         <div className="mt-5 text-center md:text-start">
-          <a href="https://www.canva.com/design/DAGpdb1ZQrc/SfpiyPTQZTt0yXCGVaYCng/view?utm_content=DAGpdb1ZQrc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37eaf2a265" target="_blank" className="btn btn-info">
+          <a href="https://www.canva.com/design/DAGpdb1ZQrc/SfpiyPTQZTt0yXCGVaYCng/view?utm_content=DAGpdb1ZQrc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37eaf2a265" target="_blank" className="btn hover:scale-110 transition duration-300 ease-in-out">
             View Full Resume
             <FaArrowUpRightFromSquare className="mr-1" />
             

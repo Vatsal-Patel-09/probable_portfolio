@@ -1,4 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
+import hljs from "highlight.js";
+import "highlight.js/styles/github-dark-dimmed.css";
 
 interface Block {
     id: string;
@@ -11,22 +15,53 @@ interface Props {
 }
 
 const BlockParser: React.FC<Props> = ({ blocks }) => {
+    useEffect(() => {
+        hljs.highlightAll();
+    }, [blocks]);
+
+    //   for table of contents
+    const headings = blocks.filter((block) => block.type === "header");
+
     return (
         <div className="prose prose-lg max-w-none">
+            {headings.length > 0 && (
+                <>
+                <nav className="p-5 rounded">
+                    <h2 className="mt-0 mb-2">Table of Contents</h2>
+                    <ul className="space-y-1 list-disc list-inside">
+                        {headings.map((heading) => (
+                            <li key={heading.id} className=" hover:underline">
+                                <a href={`#${heading.id}`} dangerouslySetInnerHTML={{ __html: heading.data.text }}></a>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+                <hr />
+                </>
+            )}
             {blocks.map((block) => {
                 switch (block.type) {
                     case "paragraph":
                         return (
-                            <p key={block.id} className="text-base ml-6 text-primary">
-                                {block.data.text}
+                            <p
+                                key={block.id}
+                                className="ml-6 text-primary"
+                                dangerouslySetInnerHTML={{ __html: block.data.text }}
+                            >
+                                {/* {block.data.text} */}
                             </p>
                         );
 
                     case "header":
                         const HeaderTag = `h${block.data.level}` as keyof JSX.IntrinsicElements;
                         return (
-                            <HeaderTag key={block.id} className="font-bold">
-                                {block.data.text}
+                            <HeaderTag
+                                id={block.id}
+                                key={block.id}
+                                className="font-bold"
+                                dangerouslySetInnerHTML={{ __html: block.data.text }}
+                            >
+                                {/* {block.data.text} */}
                             </HeaderTag>
                         );
 
@@ -35,7 +70,7 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
                             <ul className="list-disc list-inside text-primary">
                                 {items.map((item: any, i: number) => (
                                     <li key={i}>
-                                        {item.content}
+                                        <span dangerouslySetInnerHTML={{ __html: item.content }} />
                                         {item.items && renderList(item.items)}
                                     </li>
                                 ))}
@@ -45,8 +80,8 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
 
                     case "code":
                         return (
-                            <pre key={block.id} className="text-white p-4 rounded bg-gray-900">
-                                <code>{block.data.code}</code>
+                            <pre key={block.id} className="bg-transparent overflow-auto">
+                                <code className="hljs">{block.data.code}</code>
                             </pre>
                         );
 
@@ -74,7 +109,9 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
                                         <tr key={rowIndex}>
                                             {row.map((cell: string, cellIndex: number) => (
                                                 <td key={cellIndex} className="border px-4 py-2">
-                                                    {cell}
+                                                    <span
+                                                        dangerouslySetInnerHTML={{ __html: cell }}
+                                                    ></span>
                                                 </td>
                                             ))}
                                         </tr>
@@ -89,7 +126,7 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
                                 key={block.id}
                                 className="border-l-4 border-gray-500 pl-4 italic text-gray-700"
                             >
-                                <p>{block.data.text}</p>
+                                <p dangerouslySetInnerHTML={{ __html: block.data.text }}></p>
                                 {block.data.caption && (
                                     <footer className="text-sm mt-1">— {block.data.caption}</footer>
                                 )}
@@ -107,7 +144,9 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
                                             readOnly
                                             className="mr-2"
                                         />
-                                        <span>{item.text}</span>
+                                        <span
+                                            dangerouslySetInnerHTML={{ __html: item.text }}
+                                        ></span>
                                     </li>
                                 ))}
                             </ul>

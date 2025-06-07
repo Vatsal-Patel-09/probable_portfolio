@@ -11,6 +11,7 @@
   "dependencies": {
     "@directus/sdk": "^18.0.3",
     "@tailwindcss/typography": "^0.5.16",
+    "highlight.js": "^11.11.1",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",

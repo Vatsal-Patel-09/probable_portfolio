@@ -4,7 +4,7 @@ import React from "react";
 import BlogCard from "./BlogCard";
 import { createDirectus, rest, readItems } from "@directus/sdk";
 import Link from "next/link";
-import { Sora } from "next/font/google";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 const client = createDirectus("https://test-directus.jcic.online").with(rest({
     onRequest: (options) => ({ ...options, cache: 'no-store' }),
@@ -15,7 +15,7 @@ const Blog = async () => {
     // query to Directus
     const query_object = {
         fields: ["id", "Title", "preview_text", "banner_image", "slug", "status"],
-        sort: ["-date_created"],
+        limit: 6
     };
     const blogs = await client.request(readItems("Portfolio_Blog", query_object));
 
@@ -52,6 +52,10 @@ const Blog = async () => {
                     />
                 </Link>
             })}
+            <Link href="/blog" className="btn hover:scale-110 transition duration-300 ease-in-out">
+                See All Blogs
+                <FaArrowUpRightFromSquare className="mr-1" />
+            </Link>
         </>
     );
 };

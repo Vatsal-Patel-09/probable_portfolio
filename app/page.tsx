@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 
-import LeftContent from "@/components/LeftContent";
-import RightContent from "@/components/RightContent";
+import LeftContent from "@/app/LeftContent";
+import RightContent from "@/app/RightContent";
 
 
 export const metadata = {
