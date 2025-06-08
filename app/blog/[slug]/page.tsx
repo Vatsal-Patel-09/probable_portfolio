@@ -25,17 +25,30 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     };
     const result = await client.request(readItems("Portfolio_Blog", query_object));
 
-    console.log(result[0].body.blocks);
+    console.log(result);
+
+    if (result.length === 0) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-[500px]">
+                <h1 className="text-6xl font-bold">404</h1>
+                <p className="text-2xl">Post not found</p>
+                <Link href="/blog" className="mt-10 px-5 py-3 btn btn-secondary">
+                    Return to Blogs
+                </Link>
+            </div>
+        );
+    }
+
     return (
         <>
             <div className="container py-10">
                 <div className="mb-5 py-5 bg-primary bg-opacity-10 transition duration-300 ease-in-out">
                     <h1 className="text-3xl font-bold mb-3 text-center">{result[0].Title}</h1>
                     <div className="text-center">
-                        <p>
-                            Published Date: {new Date(result[0].date_created).toDateString()}
+                        <p>Published Date: {new Date(result[0].date_created).toDateString()}</p>
+                        <p className="text-sm text-gray-500">
+                            Last updated: {new Date(result[0].date_updated).toDateString()}
                         </p>
-                        <p className="text-sm text-gray-500">Last updated: {new Date(result[0].date_updated).toDateString()}</p>
                     </div>
                 </div>
 
