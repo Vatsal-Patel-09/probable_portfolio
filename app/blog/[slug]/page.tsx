@@ -53,19 +53,17 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
                 </div>
 
                 <div className="flex justify-center mb-10">
-                    <Image
-                        src={
-                            result[0].banner_image
-                                ? "https://test-directus.jcic.online/assets/" +
-                                  result[0].banner_image
-                                : "https://placehold.co/600x400/070e2b/dca54c?font=lora&text=" +
-                                  result[0].Title
-                        }
-                        alt="blog image"
-                        width={800}
-                        height={500}
-                        className="rounded-lg shadow-md"
-                    />
+                    {result[0].banner_image && (
+                        <Image
+                            src={
+                                "https://test-directus.jcic.online/assets/" + result[0].banner_image
+                            }
+                            alt="blog image"
+                            width={800}
+                            height={500}
+                            className="rounded-lg shadow-md"
+                        />
+                    )}
                 </div>
 
                 <BlockParser blocks={result[0].body.blocks} />
