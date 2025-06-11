@@ -4,7 +4,7 @@ export const PROJECTS = [
         description: "Fullstack Ecommerce application created with the MERN stack deployed on Vercel.",
         tags: ["Bootstrap CSS", "MongoDB", "Express.js", "React.js", "Node.js", "Vercel"],
         thumbnail: "images/moretech.png",
-        href: "https://cpstn-3-e-commerce-website.vercel.app/"
+        href: "https://moretechonline.jcic.online/"
     },
     {
         name: "Ecommerce Backend System",
