@@ -2,13 +2,10 @@ export const dynamic = 'force-dynamic';
 
 import React from "react";
 import BlogCard from "./BlogCard";
-import { createDirectus, rest, readItems } from "@directus/sdk";
+import { readItems } from "@directus/sdk";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-
-const client = createDirectus("https://test-directus.jcic.online").with(rest({
-    onRequest: (options) => ({ ...options, cache: 'no-store' }),
-  }));
+import directus from "@/lib/directus";
 
 const Blog = async () => {
 
@@ -17,7 +14,7 @@ const Blog = async () => {
         fields: ["id", "Title", "preview_text", "banner_image", "slug", "status"],
         limit: 6
     };
-    const blogs = await client.request(readItems("Portfolio_Blog", query_object));
+    const blogs = await directus.request(readItems("Portfolio_Blog", query_object));
 
     console.log(blogs);
 

@@ -1,16 +1,10 @@
 export const dynamic = "force-dynamic";
 
-import { createDirectus, rest, readItems } from "@directus/sdk";
-import React from "react";
-import BlockParser from "./BlockParser";
+import { readItems } from "@directus/sdk";
 import Image from "next/image";
 import Link from "next/link";
-
-const client = createDirectus("https://test-directus.jcic.online").with(
-    rest({
-        onRequest: (options) => ({ ...options, cache: "no-store" }),
-    })
-);
+import BlockParser from "./BlockParser";
+import directus from "@/lib/directus";
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
@@ -23,7 +17,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             },
         },
     };
-    const result = await client.request(readItems("Portfolio_Blog", query_object));
+    const result = await directus.request(readItems("Portfolio_Blog", query_object));
 
     console.log(result);
 
