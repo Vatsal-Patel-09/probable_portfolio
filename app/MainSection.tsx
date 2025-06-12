@@ -40,9 +40,10 @@ const MainSection = async () => {
       <section className="pt-[5rem]" id="work-experience">
         <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="work-experience-heading">Work Experiences</h1>
         {
-          experiences.map((exp, index) => (
-            <ExperienceCard key={index} year={exp.year} company={exp.company} title={exp.title} description={exp.description} techStack={exp.techStack} />
-          ))
+          experiences.map((exp, index) => {
+            if(exp.status !== "published") return
+            return <ExperienceCard key={index} year={exp.year} company={exp.company} title={exp.title} description={exp.description} techStack={exp.techStack} />
+          })
         }
         <div className="mt-5 text-center md:text-start">
           <a href="https://www.canva.com/design/DAGpdb1ZQrc/SfpiyPTQZTt0yXCGVaYCng/view?utm_content=DAGpdb1ZQrc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37eaf2a265" target="_blank" className="btn hover:scale-110 transition duration-300 ease-in-out">
@@ -65,9 +66,10 @@ const MainSection = async () => {
           <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="project-heading">Projects</h1>
           
           {
-            projects.map((project, index) => (
-              <ProjectCard key={index} name={project.name} description={project.description} tags={project.tags} thumbnail={project.thumbnail} href={project.href} />
-            ))
+            projects.map((project, index) => {
+              if(project.status !== "published") return
+              return <ProjectCard key={index} name={project.name} description={project.description} tags={project.tags} thumbnail={project.thumbnail} href={project.href} />
+            })
           }
 
 
