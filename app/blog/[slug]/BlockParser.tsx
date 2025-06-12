@@ -80,7 +80,7 @@ const BlockParser: React.FC<Props> = ({ blocks }) => {
                         return (
                             <figure key={block.id} className="flex flex-col items-center">
                                 <img
-                                    src={"https://test-directus.jcic.online" + block.data.file.url}
+                                    src={"https://directus-jcic.jcic.online" + block.data.file.url}
                                     alt={block.data.caption}
                                     className="max-w-full h-auto"
                                 />

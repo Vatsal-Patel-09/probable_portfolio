@@ -10,16 +10,16 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
 
     // query to Directus
-    const query_object = {
+    const options = {
         filter: {
             slug: {
                 _eq: slug,
             },
         },
     };
-    const result = await directus.request(readItems("Portfolio_Blog", query_object));
+    const result = await directus.request(readItems("Portfolio_Blog", options));
 
-    console.log(result);
+    // console.log(result);
 
     if (result.length === 0) {
         return (
@@ -50,7 +50,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
                     {result[0].banner_image && (
                         <Image
                             src={
-                                "https://test-directus.jcic.online/assets/" + result[0].banner_image
+                                "https://directus-jcic.jcic.online/assets/" + result[0].banner_image
                             }
                             alt="blog image"
                             width={800}

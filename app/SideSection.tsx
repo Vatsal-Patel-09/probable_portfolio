@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaEnvelope } from "react-icons/fa";
 import Nav from "./Nav";
 
-const LeftContent = () => {
+const SideSection = () => {
 
   return (
     <div className="sticky top-0 md:h-screen text-center md:text-start py-4 md:py-[4rem] mb-[5rem] md:mb-0 flex flex-col justify-between gap-10">
@@ -34,4 +34,4 @@ const LeftContent = () => {
   )
 }
 
-export default LeftContent
+export default SideSection

@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 
-import LeftContent from "@/app/LeftContent";
-import RightContent from "@/app/RightContent";
+import SideSection from "@/app/SideSection";
+import MainSection from "@/app/MainSection";
 
 
 export const metadata = {
@@ -14,10 +14,10 @@ export default function Home() {
         <>
             <div className="container flex flex-col md:flex-row lg:flex-row gap-10">
                 <div className="w-full md:w-1/2 lg:w-5/12">
-                    <LeftContent />
+                    <SideSection />
                 </div>
                 <div className="w-full md:w-1/2 lg:w-7/12 py-4 lg:py-[4rem]">
-                    <RightContent />
+                    <MainSection />
                 </div>
             </div>
         </>

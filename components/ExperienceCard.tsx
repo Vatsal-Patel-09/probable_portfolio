@@ -3,7 +3,7 @@ interface ExpInfo {
     company: String;
     title: String;
     description: String;
-    techStack: Array<String>;
+    techStack: Array<{ name: String }>;
 }
 
 const ExperienceCard = ({ year, company, title, description, techStack }: ExpInfo) => {
@@ -20,7 +20,7 @@ const ExperienceCard = ({ year, company, title, description, techStack }: ExpInf
                             key={index}
                             className="bg-secondary text-secondary-content text-[.7rem] font-bold rounded-full px-2 py-0.5 mr-2 mb-2"
                         >
-                            {tech}
+                            {tech.name}
                         </span>
                     ))}
                 </div>

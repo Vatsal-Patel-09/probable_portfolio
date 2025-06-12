@@ -1,21 +1,27 @@
-import EXPERIENCES from "@/data/experiences"
-import ExperienceCard from "../components/ExperienceCard"
-import { FaArrowUpRightFromSquare } from "react-icons/fa6"
-import ProjectCard from "../components/ProjectCard"
-import dynamic from 'next/dynamic'
-import Footer from "./Footer"
-import { PROJECTS } from "@/data/projects"
-import BlogCard from "../components/BlogCard"
-import Blog from "../components/Blog"
 import ContactForm from "@/components/ContactForm"
+import directus from "@/lib/directus"
+import { readItems } from "@directus/sdk"
+import dynamic from 'next/dynamic'
+import { FaArrowUpRightFromSquare } from "react-icons/fa6"
+import Blog from "../components/Blog"
+import ExperienceCard from "../components/ExperienceCard"
+import ProjectCard from "../components/ProjectCard"
+import Footer from "./Footer"
 
 // To disable SSR for CursorEffectComponent
 const TechStack = dynamic(() => import('@/components/TechStack'), { ssr: false })
 
 
+const MainSection = async () => {
+  
+  const options = {
+    sort: ["-order"],
+  }
 
+  const experiences = await directus.request(readItems("Experiences", options));
+  const projects = await directus.request(readItems("projects", options));
 
-const RightContent = () => {
+  // console.log(projects)
   
   return (
     <>
@@ -34,7 +40,7 @@ const RightContent = () => {
       <section className="pt-[5rem]" id="work-experience">
         <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="work-experience-heading">Work Experiences</h1>
         {
-          EXPERIENCES.map((exp, index) => (
+          experiences.map((exp, index) => (
             <ExperienceCard key={index} year={exp.year} company={exp.company} title={exp.title} description={exp.description} techStack={exp.techStack} />
           ))
         }
@@ -59,7 +65,7 @@ const RightContent = () => {
           <h1 className="text-2xl font-bold mb-5 pt-5 text-center md:text-start" id="project-heading">Projects</h1>
           
           {
-            PROJECTS.map((project, index) => (
+            projects.map((project, index) => (
               <ProjectCard key={index} name={project.name} description={project.description} tags={project.tags} thumbnail={project.thumbnail} href={project.href} />
             ))
           }
@@ -123,4 +129,4 @@ const RightContent = () => {
   )
 }
 
-export default RightContent
+export default MainSection

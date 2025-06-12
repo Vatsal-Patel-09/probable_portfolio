@@ -9,14 +9,14 @@ import { readItems } from "@directus/sdk";
 
 const Blog = async () => {
     // query to Directus
-    const query_object = {
+    const options = {
         fields: ["id", "Title", "preview_text", "banner_image", "slug", "status", "date_updated", "date_created"],
         sort: ["-date_created"],
     };
     
-    const blogs = await directus.request(readItems("Portfolio_Blog", query_object));
+    const blogs = await directus.request(readItems("Portfolio_Blog", options));
 
-    console.log(blogs);
+    // console.log(blogs);
 
     function createPreview(text: string, maxLength = 100) {
         if (text.length <= maxLength) return text;
@@ -45,7 +45,7 @@ const Blog = async () => {
                                 date={blog.date_created}
                                 thumbnail={
                                     blog.banner_image
-                                        ? "https://test-directus.jcic.online/assets/" +
+                                        ? "https://directus-jcic.jcic.online/assets/" +
                                           blog.banner_image
                                         : `https://placehold.co/600x400/070e2b/dca54c?font=lora&text=${blog.Title.split(" ")[0].slice(0, -1)}`
                                 }
