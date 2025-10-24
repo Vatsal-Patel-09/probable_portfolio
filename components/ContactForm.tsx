@@ -68,11 +68,13 @@ export default function ContactForm() {
                     required
                 ></textarea>
 
-                <HCaptcha
-                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                    reCaptchaCompat={false}
-                    onVerify={onHCaptchaChange}
-                />
+                <div className="relative inline-block">
+                    <HCaptcha
+                        sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                        reCaptchaCompat={false}
+                        onVerify={onHCaptchaChange}
+                    />
+                </div>
 
                 <button type="submit" className="w-full btn" disabled={isSubmitting}>
                     {isSubmitting ? (

@@ -8,6 +8,11 @@ const CursorEffectComponent = dynamic(() => import("@/components/CursorEffectCom
   ssr: false,
 });
 
+// Custom cursor component
+const CustomCursor = dynamic(() => import("@/components/CustomCursor").then(mod => mod.CustomCursor), {
+  ssr: false,
+});
+
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -33,6 +38,7 @@ export default function RootLayout({
 
       <body className={robotoMono.className}>
 
+        <CustomCursor />
         <CursorEffectComponent />
         {children}
 

@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide default cursor everywhere */
+*, 
+*::before, 
+*::after,
+input,
+textarea,
+button,
+a,
+div,
+span {
+  cursor: none !important;
+}
+
+/* Show default cursor ONLY on iframes (like hCaptcha) */
+iframe {
+  cursor: auto !important;
+}
 
 html {
   scroll-behavior: smooth;
