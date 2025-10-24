@@ -7,10 +7,6 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'directus-jcic.jcic.online',
-            }, 
-            {
-                protocol: 'https',
                 hostname: 'placehold.co',
             }
         ],

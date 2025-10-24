@@ -1,23 +1,17 @@
 export const dynamic = "force-dynamic";
 
-import { readItems } from "@directus/sdk";
 import Image from "next/image";
 import Link from "next/link";
 import BlockParser from "./BlockParser";
-import directus from "@/lib/directus";
+
+// Import JSON data
+import blogsData from "@/data/blogs.json"
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
 
-    // query to Directus
-    const options = {
-        filter: {
-            slug: {
-                _eq: slug,
-            },
-        },
-    };
-    const result = await directus.request(readItems("Portfolio_Blog", options));
+    // Find blog by slug
+    const result = blogsData.filter(blog => blog.slug === slug && blog.status === "published");
 
     // console.log(result);
 
@@ -49,9 +43,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
                 <div className="flex justify-center mb-10">
                     {result[0].banner_image && (
                         <Image
-                            src={
-                                "https://directus-jcic.jcic.online/assets/" + result[0].banner_image
-                            }
+                            src={result[0].banner_image}
                             alt="blog image"
                             width={800}
                             height={500}

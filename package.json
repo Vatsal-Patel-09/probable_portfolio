@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@directus/sdk": "^18.0.3",
     "@hcaptcha/react-hcaptcha": "^1.12.0",
     "@tailwindcss/typography": "^0.5.16",
     "@web3forms/react": "^1.1.3",

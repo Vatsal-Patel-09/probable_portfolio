@@ -3,7 +3,7 @@ import React from "react";
 import NavBlog from "./NavBlog";
 
 export const metadata: Metadata = {
-    title: "Blogs | Jerry Clark Ian Cabuntucan",
+    title: "Blogs | Vatsal Patel",
     description: "Stuff that I like to share!",
     icons: {
         icon: "/favicon/favicon-32x32.png",

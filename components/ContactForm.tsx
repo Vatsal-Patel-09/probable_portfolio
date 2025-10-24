@@ -19,12 +19,12 @@ export default function ContactForm() {
     const [isSuccess, setIsSuccess] = useState(false);
     const [result, setResult] = useState(null);
 
-    const accessKey = "c8358f7b-3f2d-4f00-9fc2-861d0cdbcdfa";
+    const accessKey = "44efdccd-f426-4dd0-a013-2d57f128be2a";
 
     const { submit: onSubmit } = useWeb3Forms({
         access_key: accessKey,
         settings: {
-            from_name: "jcic.online Portfolio",
+            from_name: "vatsal's Portfolio",
             subject: "New Contact Message from your Website",
             // ... other settings
         },
@@ -69,7 +69,7 @@ export default function ContactForm() {
                 ></textarea>
 
                 <HCaptcha
-                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                    sitekey="c51ef438-5dee-4232-b05c-154e9cfccad6"
                     reCaptchaCompat={false}
                     onVerify={onHCaptchaChange}
                 />

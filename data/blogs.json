@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "Title": "Getting Started with Next.js 14 and App Router",
+    "slug": "getting-started-nextjs-14-app-router",
+    "preview_text": "Learn how to build modern web applications using Next.js 14's new App Router. This comprehensive guide covers routing, server components, and best practices for building performant React applications.",
+    "banner_image": "/images/blog/nextjs-14.jpg",
+    "status": "published",
+    "date_created": "2024-10-15T10:30:00",
+    "date_updated": "2024-10-16T14:20:00",
+    "body": {
+      "blocks": [
+        {
+          "id": "block-1",
+          "type": "header",
+          "data": {
+            "text": "Introduction to Next.js 14",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-2",
+          "type": "paragraph",
+          "data": {
+            "text": "Next.js 14 introduces significant improvements to the App Router, making it easier than ever to build full-stack React applications. In this guide, we'll explore the key features and how to get started."
+          }
+        },
+        {
+          "id": "block-3",
+          "type": "header",
+          "data": {
+            "text": "Key Features",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-4",
+          "type": "nestedlist",
+          "data": {
+            "items": [
+              {
+                "content": "Server Components by default",
+                "items": []
+              },
+              {
+                "content": "Improved routing system",
+                "items": []
+              },
+              {
+                "content": "Built-in data fetching",
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-5",
+          "type": "code",
+          "data": {
+            "code": "// Example of a Server Component\nexport default async function Page() {\n  const data = await fetch('https://api.example.com/data');\n  const json = await data.json();\n  \n  return <div>{json.title}</div>;\n}",
+            "language": "javascript"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "Title": "Building RESTful APIs with Node.js and Express",
+    "slug": "building-restful-apis-nodejs-express",
+    "preview_text": "A complete guide to creating RESTful APIs using Node.js and Express. Learn about routing, middleware, authentication, error handling, and best practices for building scalable backend services.",
+    "banner_image": "/images/blog/nodejs-express.jpg",
+    "status": "published",
+    "date_created": "2024-10-10T09:15:00",
+    "date_updated": "2024-10-10T09:15:00",
+    "body": {
+      "blocks": [
+        {
+          "id": "block-6",
+          "type": "header",
+          "data": {
+            "text": "What is REST?",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-7",
+          "type": "paragraph",
+          "data": {
+            "text": "REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on stateless, client-server communication and uses HTTP methods explicitly."
+          }
+        },
+        {
+          "id": "block-8",
+          "type": "header",
+          "data": {
+            "text": "Setting Up Express",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-9",
+          "type": "code",
+          "data": {
+            "code": "const express = require('express');\nconst app = express();\n\napp.use(express.json());\n\napp.get('/api/users', (req, res) => {\n  res.json({ users: [] });\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});",
+            "language": "javascript"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "Title": "TypeScript Best Practices for React Developers",
+    "slug": "typescript-best-practices-react",
+    "preview_text": "Enhance your React development with TypeScript. This article covers essential TypeScript patterns, type definitions, generics, and tips for writing type-safe React components.",
+    "banner_image": "/images/blog/typescript-react.jpg",
+    "status": "published",
+    "date_created": "2024-10-05T16:45:00",
+    "date_updated": "2024-10-06T11:30:00",
+    "body": {
+      "blocks": [
+        {
+          "id": "block-10",
+          "type": "header",
+          "data": {
+            "text": "Why TypeScript with React?",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-11",
+          "type": "paragraph",
+          "data": {
+            "text": "TypeScript adds static typing to JavaScript, which helps catch errors during development and improves code maintainability. When combined with React, it provides excellent IntelliSense and refactoring capabilities."
+          }
+        },
+        {
+          "id": "block-12",
+          "type": "header",
+          "data": {
+            "text": "Component Props Typing",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-13",
+          "type": "code",
+          "data": {
+            "code": "interface ButtonProps {\n  label: string;\n  onClick: () => void;\n  variant?: 'primary' | 'secondary';\n}\n\nconst Button: React.FC<ButtonProps> = ({ label, onClick, variant = 'primary' }) => {\n  return (\n    <button onClick={onClick} className={variant}>\n      {label}\n    </button>\n  );\n};",
+            "language": "typescript"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "Title": "Mastering Tailwind CSS: Tips and Tricks",
+    "slug": "mastering-tailwind-css-tips-tricks",
+    "preview_text": "Unlock the full potential of Tailwind CSS with these advanced tips and tricks. Learn about custom configurations, utility classes, responsive design, and optimizing your build for production.",
+    "banner_image": "/images/blog/tailwind-css.jpg",
+    "status": "published",
+    "date_created": "2024-09-28T13:20:00",
+    "date_updated": "2024-09-28T13:20:00",
+    "body": {
+      "blocks": [
+        {
+          "id": "block-14",
+          "type": "header",
+          "data": {
+            "text": "Custom Configuration",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-15",
+          "type": "paragraph",
+          "data": {
+            "text": "Tailwind CSS is highly customizable. You can extend the default theme with your own colors, spacing, and other design tokens."
+          }
+        },
+        {
+          "id": "block-16",
+          "type": "code",
+          "data": {
+            "code": "// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        'brand-blue': '#1fb6ff',\n        'brand-purple': '#7e5bef',\n      },\n      spacing: {\n        '128': '32rem',\n      }\n    }\n  }\n}",
+            "language": "javascript"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "Title": "Understanding JavaScript Closures",
+    "slug": "understanding-javascript-closures",
+    "preview_text": "Deep dive into JavaScript closures, one of the most important concepts in the language. Learn how closures work, common use cases, and how to avoid common pitfalls.",
+    "banner_image": "/images/blog/javascript-closures.jpg",
+    "status": "published",
+    "date_created": "2024-09-20T10:00:00",
+    "date_updated": "2024-09-21T15:45:00",
+    "body": {
+      "blocks": [
+        {
+          "id": "block-17",
+          "type": "header",
+          "data": {
+            "text": "What is a Closure?",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-18",
+          "type": "paragraph",
+          "data": {
+            "text": "A closure is a function that has access to variables in its outer (enclosing) lexical scope, even after the outer function has returned. This is a fundamental concept in JavaScript."
+          }
+        },
+        {
+          "id": "block-19",
+          "type": "quote",
+          "data": {
+            "text": "Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure 'remembers' the environment in which it was created.",
+            "caption": "MDN Web Docs"
+          }
+        },
+        {
+          "id": "block-20",
+          "type": "code",
+          "data": {
+            "code": "function createCounter() {\n  let count = 0;\n  \n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2",
+            "language": "javascript"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "Title": "Docker Fundamentals for Web Developers",
+    "slug": "docker-fundamentals-web-developers",
+    "preview_text": "Learn Docker basics and how to containerize your web applications. This guide covers Docker concepts, creating Dockerfiles, docker-compose, and deploying containers to production.",
+    "banner_image": "/images/blog/docker-fundamentals.jpg",
+    "status": "published",
+    "date_created": "2024-09-15T08:30:00",
+    "date_updated": "2024-09-15T08:30:00",
+    "body": {
+      "blocks": [
+        {
+          "id": "block-21",
+          "type": "header",
+          "data": {
+            "text": "Why Use Docker?",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-22",
+          "type": "paragraph",
+          "data": {
+            "text": "Docker allows you to package your application with all its dependencies into a standardized unit called a container. This ensures consistency across different environments."
+          }
+        },
+        {
+          "id": "block-23",
+          "type": "header",
+          "data": {
+            "text": "Creating a Dockerfile",
+            "level": 2
+          }
+        },
+        {
+          "id": "block-24",
+          "type": "code",
+          "data": {
+            "code": "FROM node:18-alpine\n\nWORKDIR /app\n\nCOPY package*.json ./\nRUN npm install\n\nCOPY . .\n\nEXPOSE 3000\n\nCMD [\"npm\", \"start\"]",
+            "language": "dockerfile"
+          }
+        },
+        {
+          "id": "block-25",
+          "type": "checklist",
+          "data": {
+            "items": [
+              {
+                "text": "Install Docker Desktop",
+                "checked": true
+              },
+              {
+                "text": "Create a Dockerfile",
+                "checked": true
+              },
+              {
+                "text": "Build the Docker image",
+                "checked": false
+              },
+              {
+                "text": "Run the container",
+                "checked": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

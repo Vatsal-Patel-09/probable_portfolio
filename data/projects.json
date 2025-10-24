@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "name": "E-Commerce Platform",
+    "description": "A full-featured online shopping platform with product catalog, shopping cart, payment integration, and admin dashboard. Built with modern web technologies for optimal performance and user experience.",
+    "tags": [
+      { "name": "Next.js" },
+      { "name": "React" },
+      { "name": "TypeScript" },
+      { "name": "Stripe" },
+      { "name": "PostgreSQL" }
+    ],
+    "thumbnail": "project-ecommerce.jpg",
+    "href": "https://example.com/ecommerce",
+    "status": "published",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "name": "Task Management System",
+    "description": "A collaborative project management tool with real-time updates, team collaboration features, and progress tracking. Includes kanban boards, time tracking, and reporting capabilities.",
+    "tags": [
+      { "name": "React" },
+      { "name": "Node.js" },
+      { "name": "Socket.io" },
+      { "name": "MongoDB" },
+      { "name": "Redux" }
+    ],
+    "thumbnail": "project-taskmanager.jpg",
+    "href": "https://example.com/taskmanager",
+    "status": "published",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Website Builder",
+    "description": "A drag-and-drop website builder specifically designed for creating portfolio websites. Features customizable templates, image galleries, and contact forms.",
+    "tags": [
+      { "name": "Vue.js" },
+      { "name": "Express.js" },
+      { "name": "MySQL" },
+      { "name": "AWS S3" }
+    ],
+    "thumbnail": "project-portfolio-builder.jpg",
+    "href": "https://example.com/portfolio-builder",
+    "status": "published",
+    "order": 3
+  },
+  {
+    "id": 4,
+    "name": "Weather Dashboard",
+    "description": "Real-time weather monitoring application with interactive maps, forecasts, and historical data visualization. Integrates with multiple weather APIs for accurate predictions.",
+    "tags": [
+      { "name": "React" },
+      { "name": "Chart.js" },
+      { "name": "OpenWeather API" },
+      { "name": "Tailwind CSS" }
+    ],
+    "thumbnail": "project-weather.jpg",
+    "href": "https://example.com/weather-dashboard",
+    "status": "published",
+    "order": 4
+  }
+]

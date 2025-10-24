@@ -5,8 +5,8 @@ import MainSection from "@/app/MainSection";
 
 
 export const metadata = {
-    title: "Jerry Clark Ian Cabuntucan",
-    description: "Portfolio website - Fullstack Developer",
+    title: "Vatsal Patel",
+    description: "Portfolio website - Software Developer",
 };
 
 export default function Home() {

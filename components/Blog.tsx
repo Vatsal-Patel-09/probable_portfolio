@@ -2,19 +2,19 @@ export const dynamic = 'force-dynamic';
 
 import React from "react";
 import BlogCard from "./BlogCard";
-import { readItems } from "@directus/sdk";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import directus from "@/lib/directus";
+
+// Import JSON data
+import blogsData from "@/data/blogs.json"
 
 const Blog = async () => {
 
-    // query to Directus
-    const options = {
-        fields: ["id", "Title", "preview_text", "banner_image", "slug", "status"],
-        limit: 6
-    };
-    const blogs = await directus.request(readItems("Portfolio_Blog", options));
+    // Get latest 6 blogs
+    const blogs = blogsData
+        .filter(blog => blog.status === "published")
+        .sort((a, b) => new Date(b.date_created).getTime() - new Date(a.date_created).getTime())
+        .slice(0, 6);
 
     // console.log(blogs);
 
@@ -43,7 +43,7 @@ const Blog = async () => {
                         description={createPreview(blog.preview_text)}
                         thumbnail={
                             blog.banner_image ?
-                            "https://directus-jcic.jcic.online/assets/" + blog.banner_image :
+                            blog.banner_image :
                             `https://placehold.co/600x400/070e2b/dca54c?font=lora&text=${blog.Title.split(" ")[0].slice(0, -1)}`
                         }
                     />

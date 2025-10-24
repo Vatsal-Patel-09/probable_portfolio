@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "year": "2023 - Present",
+    "company": "Tech Company Inc.",
+    "title": "Senior Full Stack Developer",
+    "description": "Leading the development of enterprise web applications using modern technologies. Collaborating with cross-functional teams to deliver high-quality software solutions. Mentoring junior developers and conducting code reviews.",
+    "techStack": [
+      { "name": "React" },
+      { "name": "Next.js" },
+      { "name": "TypeScript" },
+      { "name": "Node.js" },
+      { "name": "PostgreSQL" }
+    ],
+    "status": "published",
+    "order": 1
+  },
+  {
+    "id": 2,
+    "year": "2021 - 2023",
+    "company": "Digital Solutions Ltd.",
+    "title": "Full Stack Developer",
+    "description": "Developed and maintained multiple client projects ranging from e-commerce platforms to business management systems. Implemented RESTful APIs and integrated third-party services.",
+    "techStack": [
+      { "name": "JavaScript" },
+      { "name": "Vue.js" },
+      { "name": "Express.js" },
+      { "name": "MongoDB" },
+      { "name": "Docker" }
+    ],
+    "status": "published",
+    "order": 2
+  },
+  {
+    "id": 3,
+    "year": "2020 - 2021",
+    "company": "StartUp Innovations",
+    "title": "Frontend Developer",
+    "description": "Built responsive and interactive user interfaces for web applications. Worked closely with designers to implement pixel-perfect designs and ensure excellent user experience.",
+    "techStack": [
+      { "name": "HTML" },
+      { "name": "CSS" },
+      { "name": "JavaScript" },
+      { "name": "React" },
+      { "name": "Tailwind CSS" }
+    ],
+    "status": "published",
+    "order": 3
+  }
+]

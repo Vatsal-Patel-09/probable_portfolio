@@ -1,6 +1,4 @@
 import ContactForm from "@/components/ContactForm"
-import directus from "@/lib/directus"
-import { readItems } from "@directus/sdk"
 import dynamic from 'next/dynamic'
 import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 import Blog from "../components/Blog"
@@ -8,18 +6,19 @@ import ExperienceCard from "../components/ExperienceCard"
 import ProjectCard from "../components/ProjectCard"
 import Footer from "./Footer"
 
+// Import JSON data
+import experiencesData from "@/data/experiences.json"
+import projectsData from "@/data/projects.json"
+
 // To disable SSR for CursorEffectComponent
 const TechStack = dynamic(() => import('@/components/TechStack'), { ssr: false })
 
 
 const MainSection = async () => {
   
-  const options = {
-    sort: ["-order"],
-  }
-
-  const experiences = await directus.request(readItems("Experiences", options));
-  const projects = await directus.request(readItems("projects", options));
+  // Sort by order field (descending)
+  const experiences = [...experiencesData].sort((a, b) => b.order - a.order);
+  const projects = [...projectsData].sort((a, b) => b.order - a.order);
 
   // console.log(projects)
   
@@ -111,11 +110,11 @@ const MainSection = async () => {
           
       </section>
       
-      <section className="pt-[5rem]" id="blog">
+      {/* <section className="pt-[5rem]" id="blog">
           
           <Blog />
           
-      </section>
+      </section> */}
 
       <section id="contact-form" className="pt-[5rem] min-h-screen">
         <h1 id="contact-heading" className="text-2xl font-bold text-center md:text-start mb-3 pt-5">Contact</h1>

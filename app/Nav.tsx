@@ -78,7 +78,7 @@ const Nav = () => {
                     <span className="line-height-0">Projects</span>
                 </div>
             </a>
-            <a
+            {/* <a
                 href="#blog-heading"
                 className={`hover:text-primary w-fit ${
                     activeSection === "blog" ? "nav-active" : ""
@@ -88,7 +88,7 @@ const Nav = () => {
                     <span className="navlink-line"></span>
                     <span className="line-height-0">Blogs</span>
                 </div>
-            </a>
+            </a> */}
 
             <a
                 href="#contact-heading"

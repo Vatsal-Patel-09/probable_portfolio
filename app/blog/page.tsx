@@ -4,17 +4,14 @@ import React from "react";
 import Link from "next/link";
 import BlogCardFull from "./BlogCardFull";
 
-import directus from "@/lib/directus";
-import { readItems } from "@directus/sdk";
+// Import JSON data
+import blogsData from "@/data/blogs.json"
 
 const Blog = async () => {
-    // query to Directus
-    const options = {
-        fields: ["id", "Title", "preview_text", "banner_image", "slug", "status", "date_updated", "date_created"],
-        sort: ["-date_created"],
-    };
-    
-    const blogs = await directus.request(readItems("Portfolio_Blog", options));
+    // Get all published blogs sorted by date
+    const blogs = blogsData
+        .filter(blog => blog.status === "published")
+        .sort((a, b) => new Date(b.date_created).getTime() - new Date(a.date_created).getTime());
 
     // console.log(blogs);
 
@@ -45,8 +42,7 @@ const Blog = async () => {
                                 date={blog.date_created}
                                 thumbnail={
                                     blog.banner_image
-                                        ? "https://directus-jcic.jcic.online/assets/" +
-                                          blog.banner_image
+                                        ? blog.banner_image
                                         : `https://placehold.co/600x400/070e2b/dca54c?font=lora&text=${blog.Title.split(" ")[0].slice(0, -1)}`
                                 }
                             />
