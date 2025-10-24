@@ -24,7 +24,7 @@ export default function ContactForm() {
     const { submit: onSubmit } = useWeb3Forms({
         access_key: accessKey,
         settings: {
-            from_name: "vatsal's Portfolio",
+            from_name: "Vatsal's Portfolio",
             subject: "New Contact Message from your Website",
             // ... other settings
         },
@@ -69,7 +69,7 @@ export default function ContactForm() {
                 ></textarea>
 
                 <HCaptcha
-                    sitekey="c51ef438-5dee-4232-b05c-154e9cfccad6"
+                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
                     reCaptchaCompat={false}
                     onVerify={onHCaptchaChange}
                 />

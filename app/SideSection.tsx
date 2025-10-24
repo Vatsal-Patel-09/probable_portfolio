@@ -7,8 +7,8 @@ const SideSection = () => {
     <div className="sticky top-0 md:h-screen text-center md:text-start py-4 md:py-[4rem] mb-[5rem] md:mb-0 flex flex-col justify-between gap-10">
         <div id="intro" className="pt-10 md:pt-0">
             <h1 className="text-4xl font-bold mb-8 ">Vatsal Patel</h1>
-            <h3 className="text-xl mb-8">Software Developer - AI/ML Enthusiast</h3>
-            <p className="text-sm">Empowering Web Innovation with Software Expertise</p>
+            <h3 className="text-xl mb-8">•Software Developer - Fullstack<br />•AI/ML Enthusiast</h3>
+            <p className="text-sm"><span className="font-bold text-primary">Open to SDE (Web or AI/ML) </span>roles, internships, and collaborations.</p>
         </div>
 
         <Nav />

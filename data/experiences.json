@@ -1,50 +1,47 @@
 [
   {
     "id": 1,
-    "year": "2023 - Present",
-    "company": "Tech Company Inc.",
-    "title": "Senior Full Stack Developer",
-    "description": "Leading the development of enterprise web applications using modern technologies. Collaborating with cross-functional teams to deliver high-quality software solutions. Mentoring junior developers and conducting code reviews.",
+    "year": "Aug - Sept 2025",
+    "company": "Autonmis",
+    "title": "Intern - Backend Engineer",
+    "description": "Backend Engineering & AI Automation Intern: Built OAuth‑based Salesforce integrations, Airflow ingestion DAGs to Supabase/AWS S3, Dockerized services, n8n pipelines for lead gen and WhatsApp RAG chatbot, and analytics via Google APIs.",
     "techStack": [
-      { "name": "React" },
-      { "name": "Next.js" },
-      { "name": "TypeScript" },
-      { "name": "Node.js" },
-      { "name": "PostgreSQL" }
-    ],
-    "status": "published",
-    "order": 1
-  },
-  {
-    "id": 2,
-    "year": "2021 - 2023",
-    "company": "Digital Solutions Ltd.",
-    "title": "Full Stack Developer",
-    "description": "Developed and maintained multiple client projects ranging from e-commerce platforms to business management systems. Implemented RESTful APIs and integrated third-party services.",
-    "techStack": [
-      { "name": "JavaScript" },
-      { "name": "Vue.js" },
-      { "name": "Express.js" },
-      { "name": "MongoDB" },
-      { "name": "Docker" }
-    ],
+    { "name": "Python" },
+    { "name": "Flask" },
+    { "name": "Docker" },
+    { "name": "Airflow" },
+    { "name": "Salesforce API" },
+    { "name": "Supabase PostgreSQL" },
+    { "name": "n8n" },
+    { "name": "Google Sheets API" },
+    { "name": "Gmail API" },
+    { "name": "WhatsApp Business API" },
+    { "name": "Ngrok" }
+  ],
     "status": "published",
     "order": 2
   },
   {
-    "id": 3,
-    "year": "2020 - 2021",
-    "company": "StartUp Innovations",
-    "title": "Frontend Developer",
-    "description": "Built responsive and interactive user interfaces for web applications. Worked closely with designers to implement pixel-perfect designs and ensure excellent user experience.",
+    "id": 2,
+    "year": "Feb 2025 - Present",
+    "company": "SPIFFY",
+    "title": "Co-founder & Lead Developer",
+    "description": " Led client acquisition, scoped and shipped full‑stack solutions, designed backends, and contributed reusable frontend components with seamless integrations to improve reliability and delivery velocity.",
     "techStack": [
-      { "name": "HTML" },
-      { "name": "CSS" },
-      { "name": "JavaScript" },
-      { "name": "React" },
-      { "name": "Tailwind CSS" }
-    ],
+    { "name": "React.js" },
+    { "name": "Angular" },
+    { "name": "Next.js" },
+    { "name": "Node.js" },
+    { "name": "Express.js" },
+    { "name": "TailwindCSS" },
+    { "name": "Shadcn UI" },
+    { "name": "Figma" },
+    { "name": "Flask" },
+    { "name": "SQL" },
+    { "name": "MongoDB" }
+    
+  ],
     "status": "published",
-    "order": 3
+    "order": 1
   }
 ]
